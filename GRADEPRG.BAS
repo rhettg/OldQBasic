@@ -1,3 +1,10 @@
+'This program is beautiful. I made 20 bucks off of this. My cousin
+'that is going to Arizona State University enrolled in the 2nd basic
+'class not taking the first because friends said it was easy. She was
+'way lost. She faxed home this problem and it was eventually passed on
+'to me. Pretty cool huh. Simple but cool.
+
+
 DECLARE SUB displayID ()
 DECLARE SUB selec (sel!)
 DECLARE SUB box (X1#, Y1#, X2#, Y2#, X3#, Y3#, X4#, Y4#)
@@ -5,12 +12,12 @@ DECLARE SUB box (X1#, Y1#, X2#, Y2#, X3#, Y3#, X4#, Y4#)
 DECLARE SUB xit ()
 DECLARE SUB classaverage ()
 DECLARE SUB addstudent ()
-DECLARE SUB Displayall ()
+DECLARE SUB Displayall ()           'different functions/menus
 DECLARE SUB belowC ()
 DECLARE SUB singlestudent ()
 DECLARE SUB mainmenu ()
 
-DIM SHARED stu$(230, 2)
+DIM SHARED stu$(230, 2)            'student array
 DIM SHARED per(230, 2)
 CLS
 
@@ -36,20 +43,17 @@ per(done, 2) = points / 400 * 100
 
  
 
-
-
-
 END SUB
 
 SUB belowC
  CLS
- FOR x = 1 TO 230
+ FOR x = 1 TO 230               'maximum records is 230 apparently
   IF per(x, 2) <> 0 THEN
 
-   IF per(x, 2) <= 70 THEN
-   PRINT "ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»"
-   PRINT "ºStudent ID: ", stu$(x, 1)
-   PRINT "ºStudent Name: ", stu$(x, 2)
+   IF per(x, 2) <= 70 THEN    'check percentage
+   PRINT "ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»"    'must not have had
+   PRINT "ºStudent ID: ", stu$(x, 1)                  'my box sub program
+   PRINT "ºStudent Name: ", stu$(x, 2)                'yet.
    PRINT "ºPoints: ", per(x, 1)
    PRINT "ºPercentage: ";
    PRINT USING "##.#"; per(x, 2)
@@ -135,7 +139,7 @@ SUB Displayall
 
 
 
- FOR x = 1 TO 5
+ FOR x = 1 TO 5        'max of 5 students?
   IF stu$(x, 1) <> "" THEN
    
  
